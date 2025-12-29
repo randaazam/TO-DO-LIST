@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Manager</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styletodo2.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>TodoInput</h1>
+        <div class="input-section">
+          <div class="input-container">
+            <span class="todo-icon"
+              ><i class="fa-solid fa-book" style="color: #f3f4f7"></i
+            ></span>
+            <input type="text" id="taskInput" placeholder="New Task" />
+          </div>
+          <span id="error-message" style="color: red"></span>
+
+          <button class="add-btn" id="addTaskButton">Add new task</button>
+        </div>
+      </header>
+      <main>
+        <div class="filter-buttons">
+          <button class="filter-btn" id="allTasks">All</button>
+          <button class="filter-btn" id="doneTasks">Done</button>
+          <button class="filter-btn" id="todoTasks">Todo</button>
+        </div>
+        <ul id="todoList" style="list-style-type: none">
+          <div class="todo-item"></div>
+        </ul>
+      </main>
+      <footer class="bottom-buttons">
+        <div id="deleteDoneTasks">
+          <button class="bottom-delete-btn" id="a2">Delete Done Tasks</button>
+        </div>
+        <div id="deleteAllTasks">
+          <button class="bottom-delete-btn" id="a2">Delete All Tasks</button>
+        </div>
+      </footer>
+    </div>
+    <div id="editPopup" class="modal" style="display: none">
+      <div class="modal-content">
+        <h2>Rename Task</h2>
+        <div class="input-container">
+          <span class="todo-icon"
+            ><i class="fa-solid fa-book" style="color: #f3f4f7"></i
+          ></span>
+          <input type="text" id="modalInput" />
+        </div>
+
+        <span id="modalError" style="color: red; font-size: 0.9em"></span>
+        <div class="modal-actions">
+          <button id="saveButton" class="save-btn">Save</button>
+          <button id="cancelButton" class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="confirmationPopup" class="modal" style="display: none">
+      <div class="modal-content">
+        <h2>Are you sure?</h2>
+        <p>Do you really want to delete the selected tasks?</p>
+        <div class="modal-actions">
+          <button id="confirmDeleteButton" class="save-btn">Yes</button>
+          <button id="cancelDeleteButton" class="cancel-btn">No</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="todoscript.js"></script>
+</html>
+
