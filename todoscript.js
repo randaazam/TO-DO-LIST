@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <span style="${
           task.done ? "text-decoration: line-through;color: red;" : ""
         }">${task.name}</span>
-
         <div class="task-actions" >
           
           <input type="checkbox"    ${
