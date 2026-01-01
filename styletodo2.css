@@ -11,6 +11,7 @@ body {
   border: 1px solid #ddd;
   margin-bottom: 20px;
 }
+
 .input-container {
   display: flex;
   align-items: center;
